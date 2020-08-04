@@ -6,7 +6,7 @@ FROM hashicorp/terraform:0.12.28 AS terraform-image
 
 FROM alpine:3.12.0
 
-COPY . /scripts/
+COPY *.sh /scripts/
 
 # install bash, git and get version-specific tfsec and terragrunt
 RUN apk add --update --no-cache bash git openssh && \

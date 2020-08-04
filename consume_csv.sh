@@ -1,6 +1,6 @@
 #!/bin/bash
 [ -s "$1" ] || exit 0
-
+echo "" >> "$1"
 csv_file=updated_$1
 sed 's/[^a-zA-Z0-9,\.]//g' "$1" > "$csv_file"
 
