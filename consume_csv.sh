@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # bash consume_csv.sh customers.csv "git@bitbucket.org:corpinfo/terragrunt-multiview-infrastructure-modules.git"
-echo $1
-echo $2
 [ -s "$1" ] || exit 0
 [ -z "$2" ] && exit 0
 echo "" >> "$1"
@@ -12,6 +10,10 @@ sed 's/[^a-zA-Z0-9,\.]//g' "$1" > "$csv_file"
 while IFS=, read -r col1 col2 col3 col4
 do
     echo "$col1 | $col2 | $col3 | $col4"
+    if [ -z $col1 ]
+    then
+        continue
+    fi
     if [ -d "$col1" ]
     then
         rm "$col1"/terragrunt.hcl
