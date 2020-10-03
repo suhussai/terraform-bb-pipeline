@@ -2,7 +2,7 @@ FROM wata727/tflint:0.17.0 AS tflint-image
 
 FROM koalaman/shellcheck:v0.7.1 AS shellcheck-image
 
-FROM hashicorp/terraform:0.12.29 AS terraform-image
+FROM hashicorp/terraform:0.12.28 AS terraform-image
 
 FROM alpine:3.12.0
 
