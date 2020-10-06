@@ -20,5 +20,4 @@ COPY --from=tflint-image /usr/local/bin/tflint /bin/
 COPY --from=shellcheck-image /bin/shellcheck /bin/
 COPY --from=terraform-image /bin/terraform /bin/
 
-# same as Bitbucket pipeline entrypoint
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT ["/bin/bash", "-c"]
