@@ -6,130 +6,75 @@ This image was created to help make pipeline executions more efficient. The idea
 
 This section outlines the different types of image that are hosted and available for use. They are made distinct by the tag value that is used.
 
+### Terragrunt Pipeline
+#### Description
+This image is an alpine (3.12.0) container that contains executables for: <br> tflint (0.17.0)<br> shellcheck (v0.7.1)<br>terraform (0.12.28)<br>tfsec (v0.23.2)<br>terragrunt (v0.23.31)
+#### Latest Tag
+https://github.com/suhussai/terraform-bb-pipeline/tree/0.0.5
 
-Name
-
-Latest Tag
-
-Description
-
-GitHub Link
-
-DockerHub Link
-
-Used by
-
-Terragrunt Pipeline
-
-0.0.5
-
-This image is an alpine (3.12.0) container that contains executables for:
-
-tflint (0.17.0)
-
-shellcheck (v0.7.1)
-
-terraform (0.12.28)
-
-tfsec (v0.23.2)
-
-terragrunt (v0.23.31)
-
- 
-
-https://hub.docker.com/layers/syedhussainrackspace/bb_image/release-0.0.5/images/sha256-78a1cc380b9e8734414776dd26ed356fbf83321a9a30d5485c106beb5a02ddf5
-
-docker pull syedhussainrackspace/bb_image:release-0.0.5
-
+https://hub.docker.com/layers/syedhussainrackspace/bb_image/release-0.0.5/images/sha256-78a1cc380b9e8734414776dd26ed356fbf83321a9a30d5485c106beb5a02ddf5 <br> ```docker pull syedhussainrackspace/bb_image:release-0.0.5``` 
+#### Used By
 Multiview uses this image for their customer infrastructure deployment Pipeline.
 
-Terraform Pipeline
+### Terraform Pipeline
+#### Description
+This image is an alpine (3.12.0) container that contains executables for: <br>`tflint (0.17.0)`<br>`shellcheck (v0.7.1)`<br>`terraform (0.12.28)`<br>`tfsec (v0.23.2)`
+#### Latest Tag
+https://github.com/suhussai/terraform-bb-pipeline/tree/0.1.4
 
-0.1.4
+https://hub.docker.com/layers/syedhussainrackspace/bb_image/release-0.1.4/images/sha256-d738880300367ad4b0929c3b689876b5e9788e1ca95277d7cb39be8c19f784a8 
+```docker pull syedhussainrackspace/bb_image:release-0.1.4```     
 
-This image is an alpine (3.12.0) container that contains executables for:
+#### Used By
 
-tflint (0.17.0)
+### Linting Pipeline
+#### Description
+This image is an alpine (3.12.0) container that contains executables for: <br> tflint (0.17.0)<br>tfsec (v0.23.2)
 
-shellcheck (v0.7.1)
-
-terraform (0.12.29)
-
-tfsec (v0.23.2)
-
- 
-
-https://hub.docker.com/layers/syedhussainrackspace/bb_image/release-0.1.4/images/sha256-d738880300367ad4b0929c3b689876b5e9788e1ca95277d7cb39be8c19f784a8
-
-docker pull syedhussainrackspace/bb_image:release-0.1.4
-
-Linting Pipeline
-
-0.2.0
-
-This image is an alpine (3.12.0) container that contains executables for:
-
-tflint (0.17.0)
-
-tfsec (v0.23.2)
-
- 
+#### Latest Tag
+https://github.com/suhussai/terraform-bb-pipeline/tree/0.2.0
 
 https://hub.docker.com/layers/syedhussainrackspace/bb_image/release-0.2.0/images/sha256-9300306f4fce3cfe2041c550fb423bb3964cafd455d57fe88a9c38ecefa9a0cf
+```docker pull syedhussainrackspace/bb_image:release-0.2.0```    
 
-docker pull syedhussainrackspace/bb_image:release-0.2.0
-
+#### Used By
 FinCad uses this for the linting phase of their pipeline.
+ 
 
-Releasing New Versions
+## Releasing New Versions
 
 The process for releasing a new version is very simple. Dockerhub is already configured to detect new tags. Once it finds a new version that follows the above format, it builds the image and makes it available for public use.
 
-Terragrunt Pipeline
+### Terragrunt Pipeline
 
-Clone this repo:  
-
-Switch to the terragrunt_image branch
-
-Make necessary changes
-
-Commit them
-
-Tag the new commits. Ensure that the new tag is the smallest increment from the current tag (i.e. if current tag = 0.0.5, then new tag = 0.0.6)
-
-Push the commit and tags to the remote repo
+1. Clone this repo:  https://github.com/suhussai/terraform-bb-pipeline
+2. Switch to the terragrunt_image branch
+3. Make necessary changes
+4. Commit them
+5. Tag the new commits. Ensure that the new tag is the smallest increment from the current tag (i.e. if current tag = 0.0.5, then new tag = 0.0.6)
+6. Push the commit and tags to the remote repo
 
 Done!
 
-Terraform Pipeline
+### Terraform Pipeline
 
-Clone this repo:  
-
-Switch to the vanilla_pipeline branch
-
-Make necessary changes
-
-Commit them
-
-Tag the new commits. Ensure that the new tag is the smallest increment from the current tag (i.e. if current tag = 0.0.5, then new tag = 0.0.6)
-
-Push the commit and tags to the remote repo
+1. Clone this repo:  https://github.com/suhussai/terraform-bb-pipeline
+2. Switch to the vanilla_pipeline branch
+3. Make necessary changes
+4. Commit them
+5. Tag the new commits. Ensure that the new tag is the smallest increment from the current tag (i.e. if current tag = 0.0.5, then new tag = 0.0.6)
+6. Push the commit and tags to the remote repo
 
 Done!
 
-Linting Pipeline
+### Linting Pipeline
 
-Clone this repo:  
-
-Switch to the linting_pipeline branch
-
-Make necessary changes
-
-Commit them
-
-Tag the new commits. Ensure that the new tag is the smallest increment from the current tag (i.e. if current tag = 0.0.5, then new tag = 0.0.6)
-
-Push the commit and tags to the remote repo
+1. Clone this repo:  https://github.com/suhussai/terraform-bb-pipeline
+2. Switch to the linting_pipeline branch
+3. Make necessary changes
+4. Commit them
+5. Tag the new commits. Ensure that the new tag is the smallest increment from the current tag (i.e. if current tag = 0.0.5, then new tag = 0.0.6)
+6. Push the commit and tags to the remote repo
 
 Done!
 
