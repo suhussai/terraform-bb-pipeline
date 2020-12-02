@@ -2,7 +2,7 @@
 
 This image was created to help make pipeline executions more efficient. The idea is that instead of downloading a base linux image and then downloading all of the required executables on it, why not just create an image that has those executables already installed? That way, pipelines can just pull that image and get to work instead of spending time at the start of each execution prepping the environment. 
 
-*TODO: Once we have a dockerhub account to publish this image to, we will update the pipeline to push to that dockerhub account. Right now we are using a dockerhub account created by Syed to host these images. That dockerhub account is: https://hub.docker.com/u/syedhussainrackspace*
+*TODO: Once we have an official DockerHub account to publish this image to, we will update the flow so that new images are published to that account. Right now, we are using a DockerHub account created by Syed to host these images. That DockerHub account is: https://hub.docker.com/u/syedhussainrackspace*
 
 ## Image Types
 
