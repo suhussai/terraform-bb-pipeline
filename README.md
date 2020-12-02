@@ -8,7 +8,13 @@ This section outlines the different types of image that are hosted and available
 
 ### Terragrunt Pipeline
 #### Description
-This image is an alpine (3.12.0) container that contains executables for: <br> tflint (0.17.0)<br> shellcheck (v0.7.1)<br>terraform (0.12.28)<br>tfsec (v0.23.2)<br>terragrunt (v0.23.31)
+This image is an alpine (3.12.0) container that contains executables for:
+* tflint (0.17.0)
+* shellcheck (v0.7.1)
+* terraform (0.12.28)
+* tfsec (v0.23.2)
+* terragrunt (v0.23.31)
+
 #### Latest Tag
 https://github.com/suhussai/terraform-bb-pipeline/tree/0.0.5
 
@@ -18,24 +24,36 @@ Multiview uses this image for their customer infrastructure deployment Pipeline.
 
 ### Terraform Pipeline
 #### Description
-This image is an alpine (3.12.0) container that contains executables for: <br>`tflint (0.17.0)`<br>`shellcheck (v0.7.1)`<br>`terraform (0.12.28)`<br>`tfsec (v0.23.2)`
+This image is an alpine (3.12.0) container that contains executables for:
+* tflint (0.17.0)
+* shellcheck (v0.7.1)
+* terraform (0.12.28)
+* tfsec (v0.23.2)
+
 #### Latest Tag
 https://github.com/suhussai/terraform-bb-pipeline/tree/0.1.4
 
 https://hub.docker.com/layers/syedhussainrackspace/bb_image/release-0.1.4/images/sha256-d738880300367ad4b0929c3b689876b5e9788e1ca95277d7cb39be8c19f784a8 
-```docker pull syedhussainrackspace/bb_image:release-0.1.4```     
+
+```
+docker pull syedhussainrackspace/bb_image:release-0.1.4
+```     
 
 #### Used By
 
 ### Linting Pipeline
 #### Description
-This image is an alpine (3.12.0) container that contains executables for: <br> tflint (0.17.0)<br>tfsec (v0.23.2)
+This image is an alpine (3.12.0) container that contains executables for:
+* tflint (0.17.0)
+* tfsec (v0.23.2)
 
 #### Latest Tag
 https://github.com/suhussai/terraform-bb-pipeline/tree/0.2.0
 
 https://hub.docker.com/layers/syedhussainrackspace/bb_image/release-0.2.0/images/sha256-9300306f4fce3cfe2041c550fb423bb3964cafd455d57fe88a9c38ecefa9a0cf
-```docker pull syedhussainrackspace/bb_image:release-0.2.0```    
+```
+docker pull syedhussainrackspace/bb_image:release-0.2.0
+```
 
 #### Used By
 FinCad uses this for the linting phase of their pipeline.
