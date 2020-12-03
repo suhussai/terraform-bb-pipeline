@@ -27,8 +27,6 @@ This image is an alpine (3.12.0) container that contains executables for:
 ```
 docker pull syedhussainrackspace/bb_image:release-0.0.5
 ``` 
-#### Used By
-***REMOVED*** uses this image for their customer infrastructure deployment Pipeline.
 
 ### Terraform Pipeline
 #### Description
@@ -49,8 +47,6 @@ This image is an alpine (3.12.0) container that contains executables for:
 docker pull syedhussainrackspace/bb_image:release-0.1.4
 ```     
 
-#### Used By
-
 ### Linting Pipeline
 #### Description
 This image is an alpine (3.12.0) container that contains executables for:
@@ -66,9 +62,6 @@ This image is an alpine (3.12.0) container that contains executables for:
 ```
 docker pull syedhussainrackspace/bb_image:release-0.2.0
 ```
-
-#### Used By
-***REMOVED*** uses this for the linting phase of their pipeline.
  
 
 ## Releasing New Versions
