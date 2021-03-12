@@ -4,7 +4,7 @@ FROM koalaman/shellcheck:v0.7.1 AS shellcheck-image
 
 FROM hashicorp/terraform:0.14.6 AS terraform-image
 
-FROM alpine:3.13.1
+FROM python:3.8-alpine3.13
 
 COPY *.sh /scripts/
 
