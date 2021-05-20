@@ -9,7 +9,7 @@ FROM alpine:3.13.5
 COPY *.sh /scripts/
 
 # install bash, git and get version-specific tfsec
-RUN apk add --update --no-cache bash git openssh && \
+RUN apk add --update --no-cache bash git openssh aws-cli && \
     wget https://github.com/liamg/tfsec/releases/download/v0.39.26/tfsec-linux-amd64 && \
     chmod +x tfsec-linux-amd64 && \
     mv tfsec-linux-amd64 /bin/tfsec && \
